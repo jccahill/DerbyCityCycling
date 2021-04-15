@@ -1,109 +1,70 @@
 body{
-    background: rgb(181, 165, 170);
-    padding: 0;
-    margin: 0;
-    font-family: Helvetica, sans-serif;
-}
-
-.logo{
-  width: 60%;
-  margin: 20px auto;
-  display: block;
-  max-width: 400px;
-}
-
-nav{
-  background: rgba(255, 255, 255, 0.3);
-  /* height: 60px; */
-  text-align: center;
-  font font-family: Georgia, serif;
-}
-nav a{
-    text-align: center;
-    color: white;
-    font-size: 1em;
-    padding: 5px 10px;
-    margin: 10px;
-    display: inline-block;
-    text-decoration: none;
-}
-nav a:hover{
-    text-decoration: underline;
-}
-/* styles for hero or feature */
-.hero{
-    background-image: url("img/hair.jpg");
-    height:400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* moving text below */
-    position: relative;
-}
-.hero h2{
-    position: absolute;
-    bottom: 20%;
-    right: 5%;
-}
-button{
-  position: absolute;
-  bottom: 8%;
-  right: 5%;
-  background: none;
-  padding: 5px;
-  border: 2px white solid;
-  font-size: 1.3em;
-  border-radius: 5px;
-}
-/* STYLES FOR ABOUT.HTML */
-.about-hero{
-    background-image: url("");
-    height:400px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    /* moving text below */
-    position: relative;
-  }
-  /* END ABOUT.HTML */
-
-main{
-  margin: 20px auto 20px auto;
-
-  display: flex;
-  flex-wrap: wrap;
-  /* flex-direction: row; */
-}
-.flexitem{
-    flex-basis: 300px;
-    flex-grow: 1;
-    margin: 2px 20px;
-    background: rgba(181, 181, 181, 0.5);
-    padding: 30px;
-}
-
-
-
-img{
-    width: 100%;
-    display: block;
-    margin: 1% auto 1% auto;
-
-}
-
-footer{
-    background: rgba(0, 0, 0, 0.8);
-    padding: 40px;
-    text-align: center;
-}
-
-footer p{
-    margin: 40px;
-    color: white;
-}
-
-footer a{
+  background: rgb(58, 58, 58);
   color: white;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+  transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}
+.hours {
+    position: top-right;
+    top: 100%;
+    left: 0;
+    background: #32332a;
+    color: white;
+    font-size: .7em;
+    padding: 0 5%;
+    width: 100%;
+    text-align: right;
+    line-height: 2;
+    display: inline;
+}
+header{
+  background: black;
+  padding: 20px;
+}
+section{
+  background: white;
+  color: gray;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+}
+ul{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li{
+  display: inline-block;
+  margin-right: 20px;
+}
+footer{
+  background: black;
+  padding: 10px 20px
 }
 
 /* Everything below is for larger screens */
@@ -114,7 +75,7 @@ footer a{
         }
 
         body{
-          background: rgb(181, 165, 170);
+          background: gray;
         }
 
         .logo{
@@ -132,7 +93,7 @@ footer a{
 /* Everything below is for even larger screens */
 @media screen and (min-width: 1400px) {
         body{
-          background: rgb(181, 165, 170);
+          background: gray;
         }
   img{
 
