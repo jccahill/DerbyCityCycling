@@ -16,35 +16,40 @@
       					<p>SU - M <strong>CLOSED</strong> | TUE <strong>10-6</strong> | WED <strong>10-6</strong> | THU-FRI <strong>10-6</strong> | SA <strong>10-4</strong> <br> 625 Baxter Avenue | Louisville, KY 40204 • 502-749-6775</p>
       				</div>
 
-      <div class="container" onclick="myFunction(this)">
-  <div class="bar1"></div>
-  <div class="bar2"></div>
-  <div class="bar3"></div>
+              <header>
+                <div class="container" onclick="myFunction(this)">
+<div class="bar1"></div>
+<div class="bar2"></div>
+<div class="bar3"></div>
 </div>
 
 <script>
 function myFunction(x) {
-  x.classList.toggle("change");
+x.classList.toggle("change");
 }
 </script>
 
-        <header>
-          <nav>
-            <ul>
-              <li><a href="index.html">Home</li>
-              <li><a href="services.html">Services</li>
-              <li><a href="contact.html">Contact</li>
-            </ul>
-          </nav>
-          <h1>Home</h1>
+      <header>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</li>
+            <li><a href="services.html">Services</li>
+            <li><a href="contact.html">Contact</li>
+          </ul>
+        </nav>
+        <h1>Contact</h1>
+
+                </header>
 
             <a href="index.html"><img class="logo" src="images/DCCLogo.png" alt="logo"></a>
             <!-- Logo -->
 
-                    <div class="hero">
+            <div class="w3-content w3-section">
+<img class="mySlides w3-animate-fading" src="images/bicycle_store.jpg">
+<img class="mySlides w3-animate-fading" src="images/bike_display.jpg">
+<img class="mySlides w3-animate-fading" src="images/bike_3.jpg">
 
-                          <button>Book Me</button>
-                    </div>
+<!-- End Slideshow -->
                     <!-- hero -->
         </header>
         <section>
@@ -59,5 +64,24 @@ function myFunction(x) {
           footer
         </footer>
 
+        <!--
+    Place this javascript near the bottom of your HTML document, right above the closing body tag
+    -->
+    <script>
+      var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 9000);
+    }
+    </script>
     </body>
 </html>
